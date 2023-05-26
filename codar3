@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http - http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>javascript-1</title>
+        <script>
+/*Crie uma bomba relógio (usando somente código - para deixar claro!) 
+cuja contagem regressiva vá de 30 a 0. Utilize "console.log" para escrever em 
+tela e no final da repetição escreva "EXPLOSÃO". */
+
+var inicio = 30;
+var final = 0;
+
+while (inicio >= final) {
+    console.log(inicio);
+    inicio = inicio - 1;
+    }
+    console.log ("Explosao") 
+
+
+</script>
+</head>
+<body>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-Br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http - http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>javascript-1</title>
+        <script>
+        
+    /* Escreva um algoritmo para ler 2 valores informados pelo usuário e se o segundo valor informado for igual ou menor que ZERO, deve ser lido um novo valor. 
+    Ou seja, para o segundo valor não pode ser aceito o valor zero, nem um valor negativo.  
+    O seu programa deve imprimir o resultado da divisão do primeiro valor lido pelo segundo valor. */
+
+    var primeiro_numero = prompt ("Numero 1 ");
+    var segundo_numero = prompt ("Numero2 ");
+    while( segundo_numero <= 0){
+        segundo_numero = prompt ("Informe novamente o numero 2 ");
+    }
+    console.log ( primeiro_numero / segundo_numero);
+
+    
+</script>
+</head>
+<body>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-Br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http - http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>javascript-1</title>
+        <script>
+//Escreva um algoritmo para imprimir os números de 1 (inclusive) a 10 (inclusive) em ordem decrescente.
+//Exemplo: 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 
+
+
+for (let i = 10; i >= 1; i -- ) {
+    console.log(i);
+}
+
+
+</script>
+</head>
+<body>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-Br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http - http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>javascript-1</title>
+        <script>
+
+// Faça um algoritmo que calcule e escreva a média aritmética dos números inteiros entre 15 (inclusive) e 100 (inclusive).
+
+let soma = 0
+let quantidade = 0;
+
+
+for (let i = 15; i <= 100; i ++) {
+    soma += i;
+    quantidade ++;
+}
+
+const media = soma / quantidade;
+console.log ("A média aritmética é: " + media);
+
+
+</script>
+</head>
+<body>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-Br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http - http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>javascript-1</title>
+        <script>
+/* Faça um algoritmo que calcule e escreva a média aritmética dos dois números inteiros informados pelo usuário e todos os números inteiros entre eles. 
+Considere que o primeiro sempre será menor que o segundo. */
+
+// Solicite ao usuário para inserir os dois números inteiros
+
+let num1 = parseInt(prompt("Insira o primeiro número inteiros : "));
+let num2 = parseInt( prompt("Insira o segundo número inteiros: "));
+
+// Calcula a média aritmética
+let media = (num1 + num2) / 2;
+alert ("A média aritmética entre " + num1 + "e" + num2 + "é: " + media);
+
+// imprime todos os números inteiros entre num1 e num2
+alert ("Os números inteiros entre " + num1 + "e" + num2 + "são:");
+for (let i = num1; i <= num2; i++) {
+    console.log(i);
+} 
+
+</script>
+</head>
+<body>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-Br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http - http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>javascript-1</title>
+        <script>
+
+let alunosAprovados = 0;
+
+do {
+  const nota1 = parseFloat(prompt("Digite a primeira nota:"));
+  const nota2 = parseFloat(prompt("Digite a segunda nota:"));
+
+  const media = (nota1 + nota2) / 2;
+
+  if (media >= 9.5) {
+    alunosAprovados++;
+  }
+
+  const resposta = prompt("Calcular a média de outro aluno? (S/N)").toUpperCase();
+
+  if (resposta !== "S") {
+    break;
+  }
+} while (true);
+
+alert("Quantidade de alunos aprovados: " + alunosAprovados);
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-Br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http - http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>javascript-1</title>
+        <script>
+
+function calcularMedia() {
+  var notas = [];
+  var soma = 0;
+
+  for (var i = 1; i <= 6; i++) {
+    var nota = parseFloat(prompt("Informe a nota " + i + ":"));
+
+    while (nota < 0 || nota > 10 || isNaN(nota)) {
+      nota = parseFloat(prompt("Valor inválido. Informe novamente a nota " + i + ":"));
+    }
+
+    notas.push(nota);
+    soma += nota;
+  }
+
+  var media = soma / notas.length;
+  alert("A média do aluno é: " + media.toFixed(2));
+}
+
+calcularMedia();
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-Br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http - http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>javascript-1</title>
+        <script>
+
+function imprimirValores() {
+  var n = parseInt(prompt("Informe um valor N:"));
+
+  while (isNaN(n) || n <= 0) {
+    n = parseInt(prompt("Valor inválido. Informe novamente um valor N:"));
+  }
+
+  for (var i = 1; i <= n; i++) {
+    alert(i);
+  }
+}
+
+imprimirValores();
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="pt-Br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http - http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>javascript-1</title>
+        <script>
+
+
+function imprimirNumeros() {
+  var count = 0;
+  var numero = 101;
+
+  while (count < 10) {
+    alert(numero);
+    count++;
+    numero++;
+  }
+}
+
+imprimirNumeros();
+
+
+
+
+
+</script>
+</head>
+<body>
+</body>
+<!DOCTYPE html>
+<html lang="pt-Br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http - http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>javascript-1</title>
+        <script>
+
+// Solicita o número N ao usuário
+var N = parseInt(prompt("Digite um número N:"));
+
+// Loop para percorrer todas as tabuadas de 1 a N
+for (var i = 1; i <= N; i++) {
+   alert("Tabuada do", i + ":");
+  
+  // Loop para imprimir a tabuada
+  for (var j = 1; j <= 10; j++) {
+    var resultado = i * j;
+    alert(i + " x " + j + " = " + resultado);
+  }
+  
+  alert(""); // Adiciona uma linha em branco entre as tabuadas
+}
+
+</script>
+</head>
+<body>
+</body
+<!DOCTYPE html>
+<html lang="pt-Br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http - http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>javascript-1</title>
+        <script>
+
+// Define as variáveis para contar os valores dentro e fora do intervalo
+var dentroIntervalo = 0;
+var foraIntervalo = 0;
+
+// Loop para solicitar os 10 valores ao usuário
+for (var i = 1; i <= 10; i++) {
+  // Solicita um valor ao usuário
+  var valor = parseInt(prompt("Digite o valor #" + i + ":"));
+
+  // Verifica se o valor está dentro do intervalo
+  if (valor >= 24 && valor <= 42) {
+    dentroIntervalo++;
+  } else {
+    foraIntervalo++;
+  }
+}
+
+// Imprime os resultados
+alert("Valores dentro do intervalo: " + dentroIntervalo);
+alert("Valores fora do intervalo: " + foraIntervalo);
+
+
+
+</script>
+</head>
+<body>
+</body>
